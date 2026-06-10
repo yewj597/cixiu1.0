@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>联系我们 - 四大名绣非遗文化</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "微软雅黑", sans-serif;
+				}
+			body{
+				background: #F5F5DC;
+				color: #333;
+				padding-bottom: 0;
+				}
+			.logo {
+			  /* 放到最左边 */
+			  float: left; /* 让文字左浮动 */
+			  margin-left: 20px; /* 离左边留一点空隙 */
+			  
+			  /* 放大+改白色 */
+			  font-size: 26px; /* 放大字号，可按需调整 */
+			  color: white;    /* 改成白色 */
+			  font-weight: bold; /* 加粗，更醒目 */
+			  line-height: 50px; /* 和导航栏高度一致，让文字垂直居中 */
+			}
+			
+			/* 导航栏也要改一下，防止文字和导航项挤在一起 */
+			nav {
+			  display: flex;
+			  align-items: center; /* 让所有内容垂直居中 */
+			  background-color: #99331a;
+			  padding: 0 10px;
+			  height: 50px; /* 给导航栏固定高度 */
+			}
+			
+			/* 导航链接向右靠 */
+			nav a {
+			  color: white;
+			  text-decoration: none;
+			  margin: 0 15px;
+			  font-size: 16px;
+			}
+			nav ul {
+				list-style-type: none;
+				display: flex;
+				justify-content: center;
+				}
+			nav li a {
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 20px;
+				text-decoration: none;
+				}
+			nav li a:hover {
+				background-color: #703910;
+				color: #fff;
+				}
+			.box1 {
+				max-width: 800px;
+				margin: 50px auto;
+				padding: 0 20px;
+				text-align: center;
+				}
+			.box1 h1 {
+				color: #8B4513;
+				margin-bottom: 30px;
+				}
+			.box5{
+				display: flex;
+				justify-content: center;
+			}
+			.box2,.box3,.box4 {
+				display: inline-block;
+				justify-content: center;
+				text-align: center;
+				margin: 0 10px;
+				flex-wrap: wrap;
+				padding: 20px;
+				}
+			.box2,.box3,.box4 {
+				background: #fff;
+				padding: 25px;
+				border-radius: 8px;
+				width: 220px;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+				transition: 0.3s;
+				}
+			.box2:hover {
+				transform: translateY(-3px); 
+				box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+				}
+			.box3:hover {
+				transform: translateY(-3px); 
+				box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+				}
+			.box4:hover {
+				transform: translateY(-3px); 
+				box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+				}
+			.box2 h3 {
+				color: #8B4513;
+				margin-bottom: 15px;
+				}
+			.box3 h3 {
+				color: #8B4513;
+				margin-bottom: 15px;
+				}
+			.box4 h3 {
+				color: #8B4513;
+				margin-bottom: 15px;
+				}
+			.login-box {
+			  /* 你原来的样式保留 */
+			  background: white;
+			  padding: 20px;
+			  border-radius: 8px;
+			  text-align: center;
+			  width: 250px;
+			  margin: 20px auto;
+			
+			  /* 核心动画代码 */
+			  transition: all 0.3s ease; /* 所有变化在0.3秒内平滑过渡 */
+			}
+			
+			.login-box:hover {
+			  transform: scale(1.05) translateY(-5px); /* 放大1.05倍，向上移5px */
+			  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* 加个阴影，更有立体感 */
+			}
+			.login-box input {
+			  width: 100%;
+			  padding: 8px;
+			  margin: 8px 0;
+			  border: 1px solid #ccc;
+			  border-radius: 4px;
+			  transition: border-color 0.3s ease;
+			}
+			
+			.login-box input:focus {
+			  outline: none; /* 去掉默认蓝色外框 */
+			  border-color: #99331a; /* 变成和你导航栏一样的红棕色 */
+			}
+			.login-box button {
+			  background: #99331a;
+			  color: white;
+			  border: none;
+			  padding: 8px 20px;
+			  border-radius: 4px;
+			  cursor: pointer;
+			  transition: background 0.3s ease;
+			}
+			
+			.login-box button:hover {
+			  background: #7a2815; /* 鼠标悬浮时颜色变深 */
+			}
+			p{
+				line-height: 1.55;
+				}
+			footer {
+				background-color: #222;
+				color: #fff;
+				text-align: center;
+				padding: 30px 0;
+				margin-top: 50px;
+				}
+			.footer-links a {
+				color: #ccc;
+				text-decoration: none;
+				margin: 0 10px;
+				transition: 0.3s;
+				}
+			.footer-links a:hover {
+				color: #fff;
+				text-decoration: underline;
+				}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<span class="logo">绣里江南</span>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="intro.html">介绍四绣</a></li>
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+		</nav>
+		<div class="box1">
+			<h1>联系我们</h1>
+			<p>欢迎了解四大名绣非遗文化，如果你有任何问题或合作意向，欢迎随时联系我们。</p>
+		</div>
+		<div class="box5">
+			<div class="box2">
+				<h3>📧 邮箱</h3>
+				<p>2439699743@qq.com</p>
+			</div>
+			<div class="box3">
+				<h3>📞 电话</h3>
+				<p>18010839973</p>
+			</div>
+			<div class="box4">
+				<h3>📍 地址</h3>
+				<p>安徽省合肥市</p>
+			</div>
+		</div>
+		<div class="login-box">
+		  <input type="text" placeholder="用户名" value="Guest">
+		  <input type="password" placeholder="请输入8位密码">
+		  <button>登录</button>
+		</div>
+		<footer>
+			<div class="footer-content">
+				<p>© 2026 四大名绣非遗文化展示 | 版权所有</p>
+				<p>用心传承非遗技艺，一针一线绣江南</p>
+				<div class="footer-links">
+				    <a href="#">关于我们</a> | 
+				    <a href="#">联系我们</a> | 
+				     <a href="#">隐私政策</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
