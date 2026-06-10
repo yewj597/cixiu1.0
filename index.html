@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body{
+				background: #F5F5DC url(beijing.jpg);
+				color: #333;
+				font-family: 'Microsoft YaHei',sans-serif;
+			}
+			.logo {
+			  /* 放到最左边 */
+			  float: left; /* 让文字左浮动 */
+			  margin-left: 20px; /* 离左边留一点空隙 */
+			  
+			  /* 放大+改白色 */
+			  font-size: 26px; /* 放大字号，可按需调整 */
+			  color: white;    /* 改成白色 */
+			  font-weight: bold; /* 加粗，更醒目 */
+			  line-height: 50px; /* 和导航栏高度一致，让文字垂直居中 */
+			}
+			
+			/* 导航栏也要改一下，防止文字和导航项挤在一起 */
+			nav {
+			  display: flex;
+			  align-items: center; /* 让所有内容垂直居中 */
+			  background-color: #99331a;
+			  padding: 0 10px;
+			  height: 50px; /* 给导航栏固定高度 */
+			}
+			
+			/* 导航链接向右靠 */
+			nav a {
+			  color: white;
+			  text-decoration: none;
+			  margin: 0 15px;
+			  font-size: 16px;
+			}
+			nav ul{
+				list-style-type: none;
+				display: flex;
+				justify-content: center;
+			}
+			nav li a{
+				display: block;
+				color: #fff;
+				text-align: center;
+				padding: 14px 20px;
+				text-decoration: none;
+			}
+			nav li a:hover{
+				background-color: #703910;
+				border-radius: 6px;
+				transition: 0.3s;
+				transform: translatex(-2px);
+			}
+			.video-banner {
+			  position: relative; /* 关键！让里面的文字可以叠在视频上 */
+			  width: 100%;
+			}
+			.full-video {
+			  width: 100%;
+			  display: block; /* 去掉视频默认的小空白 */
+			  /* 可选：如果视频高度不对，可以加 */
+			  /* height: 400px; */
+			  /* object-fit: cover; */
+			}
+			.banner-text {
+			  position: absolute; 
+			  top: 50%;          
+			  left: 50%;         
+			  transform: translate(-50%, -50%); 
+			  color: white;
+			  font-size: 28px;
+			  text-align: center;
+			  margin: 0;
+			  z-index: 1; 
+			  text-shadow: 0 0 8px rgba(0,0,0,0.6); 
+			}
+			.box1 {
+			  max-width: 900px;
+			  margin: 40px auto;
+			  padding: 30px;
+			  background: #fff;
+			  border-radius: 12px;
+			  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+			}
+			.box1:hover{
+				box-shadow: 0px 6px 5px 20px rgba(0,0,0,0.12);
+				transform: translatey(-5px);
+				transition: 0.3s;
+			}
+			.box1 h2 {
+				color: #8B4513;
+				font-size: 24px;
+				margin-bottom: 20px;
+			}
+			.box1 li {
+			  line-height: 1.8;
+			  margin: 12px 0;
+			  font-size: 16px;
+			  color: #555;
+			}
+			.box2 {
+			  max-width: 900px;
+			  margin: 40px auto;
+			  padding: 30px;
+			  background: #fff;
+			  border-radius: 12px;
+			  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+			}
+			.box2:hover{
+				box-shadow: 0px 6px 5px 20px rgba(0,0,0,0.12);
+				transform: translatey(-5px);
+				transition: 0.3s;
+			}
+			.box2 h3 {
+				color: #8B4513;
+				font-size: 24px;
+				margin-bottom: 20px;
+			}
+			.box2 li {
+			  line-height: 1.8;
+			  margin: 12px 0;
+			  font-size: 16px;
+			  color: #555;
+			}
+			footer {
+			    background-color: #222;
+			    color: #fff;
+			    text-align: center;
+			    padding: 30px 0;
+			    margin-top: 50px;
+			}
+			.footer-links a {
+			    color: #ccc;
+			    text-decoration: none;
+			    margin: 0 10px;
+			    transition: all 0.3s ease;
+			}
+			.footer-links a:hover {
+			    color: #fff;
+			    text-decoration: underline;
+			}
+			#box1 {
+				position: fixed;
+				bottom: 30px;
+				right: 30px;
+			}
+			
+			#box1 a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 45px;
+				height: 45px;
+				background-color: #8B4513;
+				color: #fff;
+				border-radius: 50%;
+				text-decoration: none;
+				font-size: 14px;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+				transition: 0.3s;
+			}
+			
+			#box1 a:hover {
+				background-color: #703910;
+				transform: translateY(-3px);
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<span class="logo">绣里江南</span>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="intro.html">介绍四绣</a></li>
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+		</nav>
+		<div class="banner">
+			<video class="banner-video" src="daohanglan.mp4" controls width="1400px" height="800px" autoplay muted></video>
+		</div>
+		<main>
+			<div class="box1">
+			  <h2>刺绣小知识</h2>
+			  <ul>
+			    <li>历史悠久：刺绣距今已有两千多年历史，历朝历代广为流传。</li>
+			    <li>工艺多样：拥有上百种针法，技法复杂，十分考验手艺。</li>
+			    <li>用途广泛：可制作服饰、摆件、装饰画、礼品等。</li>
+			    <li>文化价值：是东方传统美学的代表，现已列入非物质文化遗产。</li>
+			  </ul>
+			</div>
+			<div class="box2">
+			   <h3>刺绣的意义</h3>
+			   <ul>
+			     <li>文化传承：承载着千年的东方美学与民族记忆，是传统文化的活态载体。</li>
+			     <li>匠心精神：一针一线凝聚着手艺人的耐心与专注，传递着精益求精的匠人态度。</li>
+			     <li>情感寄托：常被用来表达祝福与心意，是连接人与人之间情感的温暖纽带。</li>
+			     <li>艺术价值：兼具装饰性与实用性，是兼具审美与文化内涵的传统艺术形式。</li>
+			   </ul>
+			 </div>
+		</main>
+		<footer>
+		    <div class="footer-content">
+		        <p>© 2026 四大名绣非遗文化展示 | 版权所有</p>
+		        <p>用心传承非遗技艺，一针一线绣江南</p>
+		        <div class="footer-links">
+		            <a href="#">关于我们</a> | 
+		            <a href="#">联系我们</a> | 
+		            <a href="#">隐私政策</a>
+		        </div>
+		    </div>
+			<div id="box1"><a href="#">回到顶部</a></div>
+		</footer>
+	</body>
+</html>
